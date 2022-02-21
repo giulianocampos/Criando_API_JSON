@@ -1,0 +1,24 @@
+O JSON Server é um pacote npm que permite simular uma API e isso facilita muito o desenvolvimento de aplicações. Com ele nós vamos simular um banco de dados e por meio de uma URL, será possível testar requisições. Vamos lá: 
+
+Dentro da pasta do projeto, crie uma pasta (backend).
+
+execute: 
+
+npm init -y
+npm i json-server
+
+Dentro da pasta "backend" crie um arquivo chamado "db.json". Dentro deste arquivo, defina o objeto e seus devidos end-points. Por exemplo :
+
+{
+	"products": [{	
+
+		"id": 1,
+		"name": "O sistema deverá ser específico para dispositivos Mobile"
+	}]
+}
+
+Dentro do package.json, retirar o script de test e adicionar o seguinte: 
+
+"start": "json-server --watch db.json --port 3001"
+
+Após isso, basta executar o comando "npm start" dentro da pasta "backend"
